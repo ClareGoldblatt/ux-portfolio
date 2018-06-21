@@ -1,0 +1,315 @@
+/*
+Colors used
+Primary Color (Purple): 	#5f5dbd;
+Secondary Color (Blue): #4B6289
+Tertiary Color (Pink): #e56399
+Fourth Color (Black): #191919;
+Fifth Color (White): #FFFFFF;
+Sixth Color (Grey): #C4C6C7;
+*/
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  background-color: white;
+}
+
+.no-bullet {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  /* Centers text */
+  padding: 32px 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+a {
+  color: #60316E;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #C4C6C7;
+}
+
+/*buttons*/
+
+button, .button {
+  /* overwrite browser defaults */
+  border: none;
+  /* reset the border */
+  font-family: nunito;
+  /* takes the font from the outer container */
+  font-size: 16px;
+  /* style button */
+  display: inline-block;
+  background-color: #5f5dbd;
+  color: white !important;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  transition: 0.2s opacity;
+}
+
+.cancelbutton {
+  /* overwrite browser defaults */
+  border: none;
+  /* reset the border */
+  font-family: nunito;
+  /* takes the font from the outer container */
+  font-size: 16px;
+  /* style button */
+  display: inline-block;
+  background-color: red;
+  color: white !important;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  transition: 0.2s opacity;
+}
+
+button:hover, button:focus, .button:hover, .button:focus, .cancelbutton:hover, .cancelbutton:focus {
+  cursor: pointer;
+  /* let's the mouse appear as hand when hovering over the button */
+  opacity: 0.8;
+  /* Reduces the opactiy of the button to 80% */
+}
+
+/* Images */
+
+img {
+  width: 100%;
+}
+
+.onclicktextoverimage {
+  background-size: cover;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.onclicktextoverimage div {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  bottom: 2%;
+  right: 0;
+  left: 0;
+  padding-top: 31%;
+  text-align: center;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  transition: .3s;
+}
+
+.onclicktextoverimage.show div {
+  opacity: 1;
+  visibility: visible;
+}
+
+.about-me-text {
+  font-size: 30px;
+}
+
+/* header,hero */
+
+header, #hero {
+  background-color: #5f5dbd;
+}
+
+header {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+nav {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  color: white;
+  text-align: left;
+  padding: 14px 16px 10px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  border-bottom: 2px solid #191919;
+  color: #191919;
+}
+
+#hero h1 {
+  margin: 0;
+  padding: 72px 0;
+  font-size: 48px;
+  color: #FFF;
+}
+
+/* Layout styling */
+
+#work h1 {
+  background-color: #5f5dbd;
+  margin: 0;
+  color: #FFF;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* No spacing to top and bottom and auto space to left and right */
+  padding: 0 20px;
+}
+
+.row {
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #EEE;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.col-2 {
+  font-size: 16px;
+  width: 48%;
+  display: inline-block;
+  margin-right: 4%;
+  float: left;
+}
+
+.col-2:last-child {
+  margin-right: 0;
+}
+
+/*Forms*/
+
+form {
+  margin: 80px auto;
+  max-width: 600px;
+  border: 1px solid #CCC;
+  padding: 80px;
+}
+
+form input {
+  width: 100%;
+  max-width: 100%;
+  min-height: 34px;
+  padding: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #CCC;
+}
+
+.textbox {
+  min-height: 150px;
+}
+
+/*Footer*/
+
+footer {
+  text-align: center;
+}
+
+.smicon {
+  width: 150px;
+}
+
+/*Animation*/
+
+@keyframes color-change {
+  0% {
+    fill: #f2e1bf;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* MEDIA */
+
+@media all and (max-width: 767px) {
+  #hero h1 {
+    padding: 36px 0;
+    font-size: 28px;
+  }
+  .wrapper {
+    padding: 0 10px;
+  }
+  .col-2 {
+    width: 100%;
+    margin-right: 0;
+  }
+  form {
+    margin: 30px auto;
+    border: none;
+    padding: 0;
+  }
+}
