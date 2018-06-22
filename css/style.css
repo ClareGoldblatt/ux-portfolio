@@ -61,7 +61,7 @@ button, .button {
   /* overwrite browser defaults */
   border: none;
   /* reset the border */
-  font-family: nunito;
+  font-family: 'Nunito', sans-serif;
   /* takes the font from the outer container */
   font-size: 16px;
   /* style button */
@@ -78,7 +78,7 @@ button, .button {
   /* overwrite browser defaults */
   border: none;
   /* reset the border */
-  font-family: nunito;
+  font-family: 'Nunito', sans-serif;
   /* takes the font from the outer container */
   font-size: 16px;
   /* style button */
